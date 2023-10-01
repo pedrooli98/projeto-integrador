@@ -1,42 +1,47 @@
 package app;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Stack;
 
-import java.util.Date;
-
+// Classe que contém as informaçoes sobre os filmes
 public class Movie {
 
-    public String roteiro;
+    //Detalhes do filme
+    public String sinopse;
     public int ano;
     public String genero;
-    public String nome;
-    public Movie(String roteiro, int ano, String genero){
-        this.roteiro = roteiro;
+    public String titulo;
+
+    //Constructor
+    public Movie(String sinopse, int ano, String genero, String titulo) {
+        this.sinopse = sinopse;
         this.ano = ano;
         this.genero = genero;
-        this.nome = nome;
+        this.titulo = titulo;
     }
+
+    //Retorna o gênero do filme
     public String getGenero(){
-        returne genero;
+        return genero;
     }
 
-    public static Stack <Movie>
-        filtrarMoviePorGenero(String genero List<Movie>movie){
-            Stack<Movie>filmesFiltrados=new Stack<>();
+    //Filtra os filmes pelo gênero
+    public static Stack<Movie> filtrarMoviePorGenero(String genero, List<Movie> movies) {
+        Stack<Movie> filmesFiltrados = new Stack<>();
 
-            for (Movie movie:movies){
-                if (movie.getGenero().equalsIgnoreCase(genero))
-                {
-                    movieFiltrados.push(filme);
-                }
+        for (Movie filme : movies) {
+            if (filme.getGenero().equalsIgnoreCase(genero)) {
+                filmesFiltrados.push(filme);
             }
-
-            return movieFiltrados;
-
         }
-    
+        return filmesFiltrados;
+    }
+
+    //Informaçoes sobre os filmes
     public static void main (String[]args){
         List<Movie> listaMovie = new ArrayList<>();
-        listaMovie.add(new Movie ("Filme 1 "terror"));
-        listaMovie.add(new Movie ("Filme 2 "suspense"));
-        listaMovie.add(new Movie ("Filme 3 "acao"));
-        listaMovie.add(new Movie ("Filme 4 "comedia"));
+        listaMovie.add(new Movie("Um grupo de amigos que descobre como invocar espíritos usando uma mão embalsamada.", 2022, "Terror", "Fale Comigo"));
+        listaMovie.add(new Movie ("Uma obra instigante sobre a eugenia e o racismo.", 2017, "Suspense", "Corra"));
+        listaMovie.add(new Movie ("Uma boneca que representa um ideal de ser perfeito entra em uma crise em que passa a questionar a própria existência.", 20223, "Comédia", "Barbie"));
+    }
 }
