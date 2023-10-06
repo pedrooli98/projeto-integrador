@@ -1,15 +1,29 @@
 package app;
 
-import java.util.Date;
-
 public class Movie {
 
-    public String roteiro;
-    public int ano;
-    public String genero;
-    public Movie(String roteiro, int ano, String genero){
-        this.roteiro = roteiro;
-        this.ano = ano;
-        this.genero = genero;
+    public String synopsis;
+    public int year;
+    public String genre;
+    public String title;
+
+    //Constructor
+    public Movie(String synopses, int year, String genre, String title) {
+        this.synopsis = synopses;
+        this.year = year;
+        this.genre = genre;
+        this.title = title;
+    }
+
+    public String getGenre(){
+        return genre;
+    }
+
+    @Override
+    public String toString() {
+        return "Sinopse: " + this.synopsis + ";\n" +
+                "Ano: " + this.year + ": \n" +
+                "Genero: " + this.genre + ": \n" +
+                "Titulo: " + this.title + ": \n";
     }
 }
