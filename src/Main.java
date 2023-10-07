@@ -27,6 +27,15 @@ public class Main {
                 "os dias ele faz o mesmo trajeto, encontra as mesmas pessoas no caminho e, ao que parece, leva uma vida feliz.",
                 1998, "Comedia", "O Show de Truman"));
 
+         database.newMovie(new Movie("Durante o período em que fica no cativeiro, ele encontra um antigo telefone, através do qual começa a receber mensagens das vítimas do criminoso que já partiram deste mundo.",
+                2022, "Terror", "O Telefone Preto"));
+        database.newMovie(new Movie("Após dois anos desde o surgimento do Batman (Christian Bale), os criminosos de Gotham City têm muito o que temer. Com a ajuda do tenente James Gordon (Gary Oldman) e do promotor 
+                público Harvey Dent (Aaron Eckhart), Batman luta contra o crime organizado. Acuados com o combate, os chefes do crime aceitam a proposta feita pelo Coringa (Heath Ledger) e o 
+                contratam para combater o Homem-Morcego.",
+                2008, "Suspense", "Batman - O Cavaleiro das Trevas"));
+        database.newMovie(new Movie("Depois de abrir uma agência de investigação, Nick e Audrey Spitz finalmente conseguem um caso importante: um amigo bilionário é sequestrado no dia de seu casamento.",
+                2023, "Comedia", "Mistério em Paris"));
+
 //      instanciamos uma nova classe de Movie, seu constructor, pede as informacoes que nos interessam;
 //      temos que salvar nosso novo filme no banco de dados;
 
